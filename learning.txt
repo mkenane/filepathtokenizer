@@ -1,0 +1,5 @@
+c:\windows\system32\drivers
+c:\windows\system32\drivers
+c:\windows\system32\svchost.exe
+fakefile/shouldtwork/becauseitsfake
+c:\windows\system32\svchost.exe
