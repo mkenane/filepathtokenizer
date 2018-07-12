@@ -93,16 +93,25 @@ class FilePathTokenizer:
           tokenized[single_filepath] = val.get(single_filepath)
       return tokenized
 
+# try:
+#     myFile = open('some_file.txt')
+# except IOError:
+#     print("Oh my snakes and garters!")
 
     def tokenize_fd(self, fd):
         filepaths = []
-        my_handle = open(fd)
-        with open(fd) as my_handle:
-            paths = [x.replace('\n', '').replace('"', '') for x in my_handle.readlines()]
-        for p in paths:
-            filepaths.append(p)
-        my_handle.close()
-        return tokenize_file_paths(filepaths)
+        try:
+            my_handle = open(fd)
+        except (OSError, IOError):
+            print("file not found")
+
+        else:
+            with open(fd) as my_handle:
+                paths = [x.replace('\n', '').replace('"', '') for x in my_handle.readlines()]
+                for p in paths:
+                    filepaths.append(p)
+                    my_handle.close()
+                    return self.tokenize_file_paths(filepaths)
 
 # print(tokenize_fd("learning.txt"))
 # print(tokenize_file_paths(["c:\windows\system32\drivers", "c:\windows\system32\drivers", "c:\windows\system32\svchost.exe", "notafile/path/because", "c:\windows\system32\svchost.exe"]))
