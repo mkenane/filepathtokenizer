@@ -1,5 +1,7 @@
+c:\windows\system32\drivers\dfdxvxvx
 c:\windows\system32\drivers
 c:\windows\system32\drivers
 c:\windows\system32\svchost.exe
-fakefile/shouldtwork/becauseitsfake
+fakefile/shoulddeffail/becauseitsfake
 c:\windows\system32\svchost.exe
+c:\windows\..\system32\drivers
