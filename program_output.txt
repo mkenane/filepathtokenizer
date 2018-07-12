@@ -1,0 +1,19 @@
+
+[' ']
+Filepaths cannot be an empty string
+None
+['notafile ']
+['notafile']
+['notafile']
+{'notafile': 'filepath input invalid'}
+['notafile ']
+{'notafile': 'filepath input invalid'}
+[' ']
+Filepaths cannot be an empty string
+{'c:\\windows\\system32\\drivers\\dfdxvxvx': ['c:', 'windows', 'system32', 'drivers', 'dfdxvxvx', 'windows/system32/drivers/dfdxvxvx'], 'c:\\windows\\system32\\drivers': ['c:', 'windows', 'system32', 'drivers', 'windows/system32/drivers'], 'c:\\windows\\system32\\svchost.exe': ['c:', 'windows', 'system32', 'windows/system32', 'svchost.exe', 'svchost', 'exe'], 'fakefile/shoulddeffail/becauseitsfake': 'filepath input invalid', 'c:\\windows\\..\\system32\\drivers': 'filepath input invalid'}
+['c:\\windows\\system32\\svchost.exe  fake\\file\\what']
+{'c:\\windows\\system32\\svchost.exe': ['c:', 'windows', 'system32', 'windows/system32', 'svchost.exe', 'svchost', 'exe'], 'fake\\file\\what': 'filepath input invalid'}
+{'c:\\windows\\system32\\drivers\\dfdxvxvx': ['c:', 'windows', 'system32', 'drivers', 'dfdxvxvx', 'windows/system32/drivers/dfdxvxvx'], 'c:\\windows\\system32\\drivers': ['c:', 'windows', 'system32', 'drivers', 'windows/system32/drivers'], 'c:\\windows\\system32\\svchost.exe': ['c:', 'windows', 'system32', 'windows/system32', 'svchost.exe', 'svchost', 'exe'], 'fakefile/shoulddeffail/becauseitsfake': 'filepath input invalid', 'c:\\windows\\..\\system32\\drivers': 'filepath input invalid', 'r:\\..\\.\\no\\abc ': 'filepath input invalid'}
+{'c:\\windows\\system32\\drivers\\dfdxvxvx': ['c:', 'windows', 'system32', 'drivers', 'dfdxvxvx', 'windows/system32/drivers/dfdxvxvx'], 'c:\\windows\\system32\\drivers': ['c:', 'windows', 'system32', 'drivers', 'windows/system32/drivers'], 'c:\\windows\\system32\\svchost.exe': ['c:', 'windows', 'system32', 'windows/system32', 'svchost.exe', 'svchost', 'exe'], 'fakefile/shoulddeffail/becauseitsfake': 'filepath input invalid', 'c:\\windows\\..\\system32\\drivers': 'filepath input invalid', 'r:\\..\\.\\no\\abc': 'filepath input invalid', '/trying/linux/path/with.file': 'filepath input invalid'}
+['c:\\windows\\system32\\svchost.exe D:\\real\\path\\withfile.doc']
+{'c:\\windows\\system32\\svchost.exe': ['c:', 'windows', 'system32', 'windows/system32', 'svchost.exe', 'svchost', 'exe'], 'D:\\real\\path\\withfile.doc': ['D:', 'real', 'path', 'real/path', 'withfile.doc', 'withfile', 'doc']}

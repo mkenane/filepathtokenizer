@@ -7,9 +7,9 @@ tokens = FilePathTokenizer()
 
 parser = argparse.ArgumentParser(description='File Path Tokenizer')
 
-parser.add_argument("-f", "--filepaths", nargs='+', type=str, help="Expects any number of file path arguments, wrapped in one set of quotes, example command line: $ python example.py -f 'filepath1 filepath2 filepath3' ")
+parser.add_argument("-f", "--filepaths", nargs='+', type=str, help="Expects any number of file paths, example command line: $ python example.py -f 'filepath1 filepath2 filepath3' ")
 parser.add_argument("-i", "--input", help="expects a file path to a file containing file paths")
-parser.add_argument("-s", "--stdin", help="expects file paths on stdin")
+parser.add_argument("-s", "--stdin", nargs='+', type=str, help="expects file paths on stdin")
 
 args = parser.parse_args()
 
@@ -24,11 +24,16 @@ def argsplit(string_args):
 
 
 
-# Main routine 
+# Main routine
 if args.filepaths:
+    print(args.filepaths)
     filepath_list = argsplit(args.filepaths)
     print(tokens.tokenize_file_paths(filepath_list))
 elif args.input:
     print(tokens.tokenize_fd(args.input))
+elif args.stdin:
+    print(args.stdin)
+    filepath_list = argsplit(args.stdin)
+    print(tokens.tokenize_file_paths(filepath_list))
 else:
     print('no args')
