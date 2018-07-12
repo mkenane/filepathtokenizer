@@ -22,15 +22,16 @@ class FilePathTokenizer:
         return True
 
     def isAbsoluteWindows(self, filepath):
-      drives = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-      if filepath[0] not in drives:
-        return False
-      elif filepath[1:3] != ":\\":
-        return False
-      elif ".." in filepath:
-        return False
-      else:
-        return True
+        
+        drives = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        if filepath[0] not in drives:
+            return False
+        elif filepath[1:3] != ":\\":
+            return False
+        elif ".." in filepath:
+            return False
+        else:
+            return True
 
     #  !!!!!! need to change to take in full filepath with a file
     # def tokenize_subfolders(subfolders):
